@@ -1,0 +1,24 @@
+.table-hover{
+    cursor: pointer;
+}
+
+.verticalLine {
+  border-left: thick solid black;
+}
+
+#eachProduct{
+    height: 500px;
+    width: 450px;
+    background-color: azure;
+    padding: 20px;
+    align-content: center;
+}
+
+#addToCart{
+    width: 350px;
+}
+
+#closeView{
+    float: right;
+    cursor: pointer;
+}
