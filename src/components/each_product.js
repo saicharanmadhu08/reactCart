@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
+import { addToCart } from '../actions/index';
 class EachProductView extends Component {
 
     constructor(props) {
@@ -10,6 +10,10 @@ class EachProductView extends Component {
 
     closeView() {
         this.setState({ showProduct: false });
+    }
+
+    addToCart(product){
+        this.props.addToCart(product)
     }
 
     render() {
@@ -25,7 +29,7 @@ class EachProductView extends Component {
                 <img src={product.imageUrl} height="350" width="400" />
                 <p>{product.description}</p>
                 <p><b>Price :${product.price}</b> |<span><b>Rating :{product.starRating}</b></span></p>
-                <button id="addToCart" className="btn btn-primary">Add To Cart</button>
+                <button id="addToCart" onClick={() => {this.addToCart(product)}} className="btn btn-primary">Add To Cart</button>
             </div>
         );
     }
@@ -34,4 +38,4 @@ class EachProductView extends Component {
 function mapStateToProps(state) {
     return { product: state.products.product }
 }
-export default connect(mapStateToProps, null)(EachProductView);
+export default connect(mapStateToProps, {addToCart})(EachProductView);

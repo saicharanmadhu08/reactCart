@@ -17,3 +17,11 @@ export function eachProduct(product){
         payload : request
     }
 }
+
+export function addToCart(data){
+    console.log(data);
+    return {
+        type : 'ADD_TO_CART',
+        payload: data
+    }    
+}

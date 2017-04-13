@@ -22,3 +22,12 @@
     float: right;
     cursor: pointer;
 }
+
+#viewCart{
+    width: 100%;
+}
+
+#cart{
+    background-color: yellow;
+    width: 100%;
+}

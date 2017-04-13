@@ -1,4 +1,4 @@
-const INITIAL_STATE = {all : [], product : null};
+const INITIAL_STATE = {all : [], product : null, cart : null};
 
 export default function (state = INITIAL_STATE, action){
 
@@ -8,6 +8,9 @@ export default function (state = INITIAL_STATE, action){
 
         case 'SHOW_PRODUCT':
             return {...state, product : action.payload};
+        
+        case 'ADD_TO_CART':
+            return {...state, cart : action.payload};
 
         default: 
             return state;
